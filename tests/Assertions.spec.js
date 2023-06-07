@@ -40,7 +40,8 @@ test('assertions', async ({page}) => {
     // 10) expect(locator).toHaveCount()  List of elements has given length
     const options = await  page.locator("//select[@name='DateOfBirthMonth'] option")
     await expect(options).toHaveCount(13)
-
+    // in case of adding a soft assert
+    await expect.soft('first' , '#add')
 })
 
 
